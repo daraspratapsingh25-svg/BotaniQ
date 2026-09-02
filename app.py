@@ -72,8 +72,8 @@ def get_selected_api_key(user_api_key, selected_key):
 # HERO HEADER
 # ============================================================
 
-st.title("🌿 BotaniQ")
-st.subheader("Smart visual plant health analysis for home gardeners")
+st.title("🌿 BotaniQ", anchor=False)
+st.subheader("Smart visual plant health analysis for home gardeners", anchor=False)
 
 st.caption(
     "Upload a plant image and describe what you have noticed."
@@ -112,7 +112,7 @@ left_col, right_col = st.columns(
 # ============================================================
 
 with left_col:
-    st.subheader("📷 Upload Plant Image")
+    st.subheader("📷 Upload Plant Image", anchor=False)
 
     uploaded_file = st.file_uploader(
         "Upload a clear photo of your plant",
@@ -144,7 +144,7 @@ with left_col:
 # ============================================================
 
 with right_col:
-    st.subheader("📝 What Did You Notice?")
+    st.subheader("📝 What Did You Notice?", anchor=False)
 
     symptoms = st.text_area(
         "Describe what you noticed about the plant",
@@ -167,7 +167,7 @@ with right_col:
 
 st.markdown("---")
 
-st.subheader("🔑 Gemini API Key")
+st.subheader("🔑 Gemini API Key", anchor=False)
 
 st.warning(
     "⚠️ The saved API keys provided by BotaniQ may be expired, "
@@ -859,7 +859,7 @@ gardener has reported.
 
             st.markdown("---")
 
-            st.title("🌿 BotaniQ Report")
+            st.title("🌿 BotaniQ Report", anchor=False)
 
             # ====================================================
             # TOP CARDS
@@ -877,7 +877,7 @@ gardener has reported.
             with col1:
 
                 with st.container(border=True):
-                    st.subheader("📷 Uploaded Plant")
+                    st.subheader("📷 Uploaded Plant", anchor=False)
 
                     st.image(
                         image,
@@ -891,7 +891,7 @@ gardener has reported.
             with col2:
 
                 with st.container(border=True):
-                    st.subheader("🌱 Plant / Crop")
+                    st.subheader("🌱 Plant / Crop", anchor=False)
 
                     plant = data["plant"]
 
@@ -929,7 +929,7 @@ gardener has reported.
                 severity = data["severity"]
 
                 with st.container(border=True):
-                    st.subheader("🩺 Plant Health")
+                    st.subheader("🩺 Plant Health", anchor=False)
 
                     st.metric("Status", severity["status"])
 
@@ -943,7 +943,7 @@ gardener has reported.
 
             with st.container(border=True):
 
-                st.subheader("👀 Visible Symptoms")
+                st.subheader("👀 Visible Symptoms", anchor=False)
 
                 symptom_cols = st.columns(2)
 
@@ -963,7 +963,7 @@ gardener has reported.
 
             with st.container(border=True):
 
-                st.subheader("🔍 Possible Causes")
+                st.subheader("🔍 Possible Causes", anchor=False)
 
                 causes = data["possible_causes"]
 
@@ -1017,7 +1017,7 @@ gardener has reported.
             with w1:
 
                 with st.container(border=True):
-                    st.subheader("💧 Watering Check")
+                    st.subheader("💧 Watering Check", anchor=False)
 
                     watering = data["watering"]
 
@@ -1041,7 +1041,7 @@ gardener has reported.
             with w2:
 
                 with st.container(border=True):
-                    st.subheader("☀️ Light Check")
+                    st.subheader("☀️ Light Check", anchor=False)
 
                     light = data["light"]
 
@@ -1065,7 +1065,7 @@ gardener has reported.
             with w3:
 
                 with st.container(border=True):
-                    st.subheader("🪴 Pot & Soil")
+                    st.subheader("🪴 Pot & Soil", anchor=False)
 
                     pot_soil = data["pot_soil"]
 
@@ -1098,7 +1098,7 @@ gardener has reported.
             with p1:
 
                 with st.container(border=True):
-                    st.subheader("🐛 Pest Check")
+                    st.subheader("🐛 Pest Check", anchor=False)
 
                     pest = data["pest_check"]
 
@@ -1128,7 +1128,7 @@ gardener has reported.
             with p2:
 
                 with st.container(border=True):
-                    st.subheader("🌱 Growth & Development")
+                    st.subheader("🌱 Growth & Development", anchor=False)
 
                     growth = data["growth"]
 
@@ -1148,7 +1148,7 @@ gardener has reported.
             with p3:
 
                 with st.container(border=True):
-                    st.subheader("🌸 Flowering & Fruiting")
+                    st.subheader("🌸 Flowering & Fruiting", anchor=False)
 
                     flowering = data[
                         "flowering_fruiting"
@@ -1179,7 +1179,7 @@ gardener has reported.
 
                 with st.container(border=True):
 
-                    st.subheader("✅ Immediate Actions")
+                    st.subheader("✅ Immediate Actions", anchor=False)
 
                     for i, action in enumerate(
                             data["immediate_actions"],
@@ -1199,7 +1199,7 @@ gardener has reported.
 
                 with st.container(border=True):
 
-                    st.subheader("🛡 Preventive Measures")
+                    st.subheader("🛡 Preventive Measures", anchor=False)
 
                     for measure in data[
                         "preventive_measures"
@@ -1217,7 +1217,7 @@ gardener has reported.
             with a3:
 
                 with st.container(border=True):
-                    st.subheader("👨‍🌾 Expert Help")
+                    st.subheader("👨‍🌾 Expert Help", anchor=False)
 
                     st.write(
                         data["expert_help"]
@@ -1229,7 +1229,7 @@ gardener has reported.
 
             with st.container(border=True):
 
-                st.subheader("✂️ Pruning Advice")
+                st.subheader("✂️ Pruning Advice", anchor=False)
 
                 st.write(
                     data["pruning"]
@@ -1259,7 +1259,7 @@ gardener has reported.
                     )
 
                     with plan_header_col:
-                        st.subheader("📅 7-Day Garden Plan")
+                        st.subheader("📅 7-Day Garden Plan", anchor=False)
 
                     # Google Calendar event
                     plan_start = date.today()
@@ -1330,7 +1330,7 @@ gardener has reported.
 
                 with st.container(border=True):
 
-                    st.subheader("❓ Questions for You")
+                    st.subheader("❓ Questions for You", anchor=False)
 
                     valid_questions = [
                         q
@@ -1361,7 +1361,7 @@ gardener has reported.
 
             summary = data["summary"]
 
-            st.subheader("⭐ BotaniQ Summary")
+            st.subheader("⭐ BotaniQ Summary", anchor=False)
 
             s1, s2 = st.columns(2)
 
